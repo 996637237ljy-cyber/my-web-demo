@@ -1,7 +1,5 @@
 {
-  "name": "声影共鸣 - 音乐视觉化海报",
-  "description": "一份关于音乐与画面深度对话的交互式信息图海报，展示了波形、粒子特效和多感官体验分析。",
-  "requestFramePermissions": [
-    "microphone"
-  ]
+  "name": "Resonance Lab // 声影共鸣",
+  "description": "实验性声影同步系统，探索数字艺术与AI逻辑的交汇点。",
+  "requestFramePermissions": []
 }
