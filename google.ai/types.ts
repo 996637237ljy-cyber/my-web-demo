@@ -1,22 +1,17 @@
 
-export interface VisualizerConfig {
-  particleSize: number;
-  exposure: number;
-  flow: number;
-  inkDensity: number;
-  isAudioPlaying: boolean;
-  style: 'color' | 'ink';
-  customImage?: HTMLImageElement | null;
-  audioBuffer?: AudioBuffer | null;
-  analyser?: AnalyserNode | null;
+import React from 'react';
+
+export interface Message {
+  role: 'user' | 'ai';
+  content: string;
+  type?: 'text' | 'image';
 }
 
-export enum AppSection {
-  COLOR = 'color',
-  SCENE = 'scene',
-  FEATURES = 'features',
-  CODE = 'code',
-  MOTIVATION = 'motivation',
-  PARAMS = 'params',
-  EXPERIENCE = 'experience'
+export interface GuideStep {
+  id: number;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  details: string[];
+  tips?: string;
 }
