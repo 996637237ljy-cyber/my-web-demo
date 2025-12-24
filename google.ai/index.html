@@ -7,54 +7,16 @@
     <title>声影共鸣 - 数字化视听实验海报</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-      window.process = { env: { NODE_ENV: 'production' } };
-    </script>
+    <script>window.process = { env: { NODE_ENV: 'production' } };</script>
     <style>
-        :root {
-            --bg: #fdfdfd;
-            --slate-900: #0f172a;
-        }
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background-color: var(--bg);
-            color: var(--slate-900);
-            scroll-behavior: smooth;
-            margin: 0;
-        }
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
-        .bg-pattern {
-            background-image: radial-gradient(circle at 1px 1px, #cbd5e1 0.8px, transparent 0);
-            background-size: 16px 16px;
-        }
-        .title-stroke {
-            -webkit-text-stroke: 1.2px #0f172a;
-            color: transparent;
-            paint-order: stroke fill;
-        }
-        input[type=range] {
-            -webkit-appearance: none;
-            background: transparent;
-            cursor: pointer;
-        }
-        input[type=range]::-webkit-slider-runnable-track {
-            height: 2px;
-            background: #cbd5e1;
-        }
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            height: 14px;
-            width: 14px;
-            background: var(--slate-900);
-            border: 2px solid white;
-            border-radius: 50%;
-            margin-top: -6px;
-        }
-        .neon-glow {
-            text-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
-        }
+        body { font-family: 'Noto Sans SC', sans-serif; background-color: #fdfdfd; color: #0f172a; margin: 0; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .title-stroke { -webkit-text-stroke: 1.2px #0f172a; color: transparent; }
+        input[type=range] { -webkit-appearance: none; background: transparent; cursor: pointer; }
+        input[type=range]::-webkit-slider-runnable-track { height: 2px; background: #cbd5e1; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 14px; width: 14px; background: #0f172a; border: 2px solid white; border-radius: 50%; margin-top: -6px; }
+        .animate-in { animation: animate-in 0.5s ease-out; }
+        @keyframes animate-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
     <script type="importmap">
 {
@@ -64,12 +26,13 @@
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+    "@google/genai": "https://esm.sh/@google/genai@0.21.0",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
   }
 }
 </script>
 </head>
-<body class="antialiased bg-pattern">
+<body class="antialiased">
     <div id="root"></div>
     <script type="module" src="index.tsx"></script>
 </body>
